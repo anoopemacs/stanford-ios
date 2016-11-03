@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hRr-eU-mQq">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Happiness View Controller-->
+        <scene sceneID="88Y-HJ-oR7">
+            <objects>
+                <viewController id="hRr-eU-mQq" customClass="HappinessViewController" customModule="Happiness_L5" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ufs-Ue-Ogo"/>
+                        <viewControllerLayoutGuide type="bottom" id="4lD-Sd-aaT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fRw-52-TGp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="v3Y-x3-kXr" customClass="FaceView" customModule="Happiness_L5" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="scale">
+                                        <real key="value" value="0.84999999999999998"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="df6-Vs-Tnt" appends="YES" id="G7X-LP-utB"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="v3Y-x3-kXr" firstAttribute="top" secondItem="fRw-52-TGp" secondAttribute="top" id="18o-4i-z66"/>
+                            <constraint firstItem="v3Y-x3-kXr" firstAttribute="leading" secondItem="fRw-52-TGp" secondAttribute="leading" id="51b-mg-66Z"/>
+                            <constraint firstAttribute="trailing" secondItem="v3Y-x3-kXr" secondAttribute="trailing" id="GM7-ls-pam"/>
+                            <constraint firstItem="v3Y-x3-kXr" firstAttribute="bottom" secondItem="4lD-Sd-aaT" secondAttribute="top" id="Tzw-Xf-ozO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="faceView" destination="v3Y-x3-kXr" id="5lh-rW-oKm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ElF-eM-TCG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="df6-Vs-Tnt">
+                    <connections>
+                        <action selector="changeHappiness:" destination="hRr-eU-mQq" id="WMX-AV-CQ5"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="208" y="361"/>
+        </scene>
+    </scenes>
+</document>
